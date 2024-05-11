@@ -84,15 +84,15 @@ const editNoteByIdHandler = (request, h) => {
             body,
             updatedAt
         }
-
-        const response = h.response({
-            status: 'fail',
-            message: "Gagal memperbarui catatan, Id tidak ditemukan"
-        })
-        response.code(404)
-
-        return response
     }
+
+    const response = h.response({
+        status: 'fail',
+        message: "Gagal memperbarui catatan, Id tidak ditemukan"
+    })
+    response.code(404)
+
+    return response
 }
 
 const deleteNoteByIdHandler = (request, h) => {
